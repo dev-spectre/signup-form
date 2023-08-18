@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StellarQuest: Beyond Horizons</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./style/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <script defer src="./js/script.js"></script>
+</head>
+
+<body>
+  <section class="img-section">
+    <div class="img-container">
+      <img class="bg-img" src="./assets/bgx4.jpeg" alt="A man pointing flashlight to starry night sky">
+      <div class="logo-container">
+        <img class="logo" src="./assets/stellar-quest.svg" alt="StellarQuest: Beyond Horizons">
+      </div>
+    </div>
+  </section>
+  <section class="form-section">
+    <p class="service-description">
+      StellarQuest: Beyond Horizons invites you to transcend the ordinary and explore the
+      extraordinary. Embark on awe-inspiring space odysseys, from intergalactic escapades to uncovering cosmic marvels,
+      all tailored to satisfy your celestial curiosities. Embolden your journey beyond the horizons and forge
+      unforgettable memories among the stars.
+    </p>
+    <form id="create-account">
+      <div class="form-content">
+        <h2>Let's do this!</h2>
+        <div class="form-widgets">
+          <section class="name-section">
+            <div class="first-name">
+              <label for="first-name">First name</label>
+              <span aria-label="required"></span>
+              <input id="first-name" name="first-name" type="text" required>
+            </div>
+            <div class="last-name">
+              <label for="last-name">Last name</label>
+              <span aria-label="required"></span>
+              <input type="text" name="last-name" id="last-name" required>
+            </div>
+          </section>
+          <section class="contact-section">
+            <div class="email">
+              <label for="email">Email</label>
+              <span aria-label="required"></span>
+              <input type="email" name="email" id="email">
+            </div>
+            <div class="phone">
+              <label for="phone">Phone</label>
+              <span aria-label="required"></span>
+              <input type="tel" name="phone" id="phone">
+            </div>
+          </section>
+          <section class="password-section">
+            <div class="password">
+              <label for="password">Password</label>
+              <span aria-label="required"></span>
+              <input type="password" name="password" id="password">
+            </div>
+            <div class="confirm-password">
+              <label for="confirm-password">Confirm password</label>
+              <span aria-label="required"></span>
+              <input type="password" name="confirm-password" id="confirm-password">
+            </div>
+          </section>
+        </div>
+      </div>
+    </form>
+    <div class="submit-container">
+      <button type="submit" form="create-account">Create Account</button>
+      <div class="login">
+        Already have an account? <span>Log In</span>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
