@@ -66,13 +66,17 @@ body {
 form {
   background-color: var(--form-bg-color);
   padding: 32px var(--_form-section-padding-inline);
-  font-size: 1.1875rem;
 }
 
 .service-description,
 .submit-container {
   margin-inline: var(--_form-section-padding-inline);
   margin-block: var(--_form-section-padding-block);
+}
+
+form,
+.submit-container {
+  font-size: clamp(1rem, 0.2vw + 1rem, 1.188rem);
 }
 
 .form-widgets {
