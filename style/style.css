@@ -49,8 +49,6 @@ body {
   flex-basis: 55%;
   flex-grow: 1;
   background-color: var(--form-section-bg-color);
-  padding: var(--_form-section-padding-block)
-  var(--_form-section-padding-inline);
 }
 
 .logo-container {
@@ -101,9 +99,12 @@ form {
   background-color: var(--form-bg-color);
   padding: 32px var(--_form-section-padding-inline);
   font-size: 1.1875rem;
-  width: calc(100% + var(--_form-section-padding-inline) * 2);
-  position: relative;
-  right: calc(var(--_form-section-padding-inline));
+}
+
+.service-description,
+.submit-container {
+  margin-inline: var(--_form-section-padding-inline);
+  margin-block: var(--_form-section-padding-block);
 }
 
 .form-widgets {
