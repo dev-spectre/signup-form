@@ -1,8 +1,8 @@
 :root {
-  --form-section-bg-color: #E8EAF4;
-  --form-bg-color: #DDE0F0;
-  --secondary-color: #596CAD;
-  --input-bg-color: #EBEDF3;
+  --form-section-bg-color: #e8eaf4;
+  --form-bg-color: #dde0f0;
+  --secondary-color: #596cad;
+  --input-bg-color: #ebedf3;
 }
 
 *,
@@ -20,39 +20,67 @@ body {
 }
 
 .img-section {
-  height: 100dvh;
-  overflow: hidden;
-  flex: 1 1.5 50%;
+  min-height: 100svh;
+  /* overflow: hidden; */
+  flex: 1 1.5 45%;
+  max-width: 850px;
+  /* min-width: 300px; */
   position: relative;
-  min-width: 320px;
+  background-image: url("../assets/bg.jpeg");
+  background-size: cover;
+  background-position: center bottom;
 }
 
 .bg-img {
-  height: 100%;
+  height: 100dvh;
   min-width: 100%;
   position: absolute;
   top: 100%;
   left: 50%;
   transform: translate(-50%, -100%);
+  object-position: center bottom;
+  opacity: 0;
 }
 
 .form-section {
   --_form-section-padding-block: 57.6px;
   --_form-section-padding-inline: 52.8px;
-
-  flex-basis: 1 1 50%;
+  
+  flex-basis: 55%;
+  flex-grow: 1;
   background-color: var(--form-section-bg-color);
-  padding: var(--_form-section-padding-block) var(--_form-section-padding-inline);
+  padding: var(--_form-section-padding-block)
+  var(--_form-section-padding-inline);
 }
 
 .logo-container {
   position: absolute;
-  background: rgba(17, 17, 17, 0.82);
+  background-color: rgba(17, 17, 17, 0.82);
   width: 100%;
   padding: 30px;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
+}
+
+@media screen and (max-width: 50.75em) {
+  body {
+    flex-direction: column;
+  }
+
+  .logo-container {
+    top: 0;
+    transform: translateY(0);
+    background-image: linear-gradient(
+      180deg,
+      #000 28.13%,
+      rgba(0, 0, 0, 0.72) 50%,
+      rgba(0, 0, 0, 0.41) 86.46%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    background-color: rgba(0, 0, 0, 0);
+    height: max(50%, 200px);
+  }
 }
 
 .logo {
@@ -94,6 +122,8 @@ form {
 
 .form-widgets > section > div {
   width: 45%;
+  max-width: 470px;
+  min-width: 250px;
 }
 
 label {
@@ -108,9 +138,9 @@ form h2 {
 
 input {
   background-color: var(--input-bg-color);
-  border: 1px solid #354E90;
+  border: 1px solid #354e90;
   border-radius: 7px;
   padding: 5px;
-  width: max(200px, 90%);
+  width: 100%;
   font-size: 1.1875rem;
 }
