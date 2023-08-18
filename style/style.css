@@ -29,17 +29,6 @@ body {
   background-position: center bottom;
 }
 
-.bg-img {
-  height: 100dvh;
-  min-width: 100%;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  object-position: center bottom;
-  opacity: 0;
-}
-
 .form-section {
   --_form-section-padding-block: 57.6px;
   --_form-section-padding-inline: 52.8px;
