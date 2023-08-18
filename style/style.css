@@ -120,7 +120,7 @@ input {
   font: inherit;
 }
 
-*:focus {
+*:focus:not(button:active ) {
   outline: 3px solid var(--secondary-color);
   outline-offset: 2px;
 }
