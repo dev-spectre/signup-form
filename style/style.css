@@ -1,7 +1,7 @@
 :root {
   --form-section-bg-color: #e8eaf4;
   --form-bg-color: #dde0f0;
-  --secondary-color: #596cad;
+  --secondary-color: #4E5D94;
   --input-bg-color: #ebedf3;
 }
 
@@ -66,6 +66,7 @@ body {
 form {
   background-color: var(--form-bg-color);
   padding: 32px var(--_form-section-padding-inline);
+  font-size: clamp(1rem, 0.2vw + 1rem, 1.188rem);
 }
 
 .service-description,
@@ -74,9 +75,8 @@ form {
   margin-block: var(--_form-section-padding-block);
 }
 
-form,
 .submit-container {
-  font-size: clamp(1rem, 0.2vw + 1rem, 1.188rem);
+  font-size: clamp(0.938rem, 3.5vw - 1rem, 1.063rem);
 }
 
 .form-widgets {
@@ -102,11 +102,13 @@ form,
 label {
   display: block;
   text-transform: uppercase;
+  margin-bottom: 2px;
 }
 
 form h2 {
   font-size: clamp(1.25rem, 0.55vw + 1rem, 1.688rem);
   margin-bottom: 12px;
+  font-weight: 600;
 }
 
 input {
@@ -115,7 +117,38 @@ input {
   border-radius: 7px;
   padding: 5px;
   width: 100%;
-  font-size: 1.1875rem;
+  font: inherit;
+}
+
+*:focus {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: 7px;
+  color: var(--input-bg-color);
+  padding: 9px 28px;
+  font-weight: 700;
+  font-size: clamp(1.25rem, 0.5vw + 1rem, 1.438rem);
+  margin-bottom: 13px;
+}
+
+.btn:hover {
+  background-color: #455283;
+  cursor: pointer;
+}
+
+.btn:active {
+  background-color: #4E5D94B2;
+}
+
+.login span a {
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 50.75em) {
