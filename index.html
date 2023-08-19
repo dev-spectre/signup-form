@@ -39,36 +39,38 @@
             <div class="first-name">
               <label for="first-name">First name</label>
               <span aria-label="required"></span>
-              <input id="first-name" name="first-name" type="text" required>
+              <input id="first-name" name="first-name" type="text" required placeholder="">
             </div>
             <div class="last-name">
               <label for="last-name">Last name</label>
               <span aria-label="required"></span>
-              <input type="text" name="last-name" id="last-name" required>
+              <input type="text" name="last-name" id="last-name" required placeholder="">
             </div>
           </section>
           <section class="contact-section">
             <div class="email">
               <label for="email">Email</label>
               <span aria-label="required"></span>
-              <input type="email" name="email" id="email">
+              <input type="text" name="email" id="email"
+                pattern="[a-zA-Z]([.\-+_]?[a-zA-Z0-9]+)*@[a-zA-Z]+(-?[a-zA-Z]+)+(\.[a-zA-Z]+-?[a-zA-Z]+)?(\.[a-zA-Z]{2,}){1,2}$"
+                placeholder="example@mail.com" required>
             </div>
             <div class="phone">
               <label for="phone">Phone</label>
               <span aria-label="required"></span>
-              <input type="tel" name="phone" id="phone">
+              <input type="tel" name="phone" id="phone" pattern="\d{4,14}$" placeholder="xxxxxxxxxx" required>
             </div>
           </section>
           <section class="password-section">
             <div class="password">
               <label for="password">Password</label>
               <span aria-label="required"></span>
-              <input type="password" name="password" id="password">
+              <input type="password" name="password" id="password" required placeholder="">
             </div>
             <div class="confirm-password">
               <label for="confirm-password">Confirm password</label>
               <span aria-label="required"></span>
-              <input type="password" name="confirm-password" id="confirm-password">
+              <input type="password" name="confirm-password" id="confirm-password" required placeholder="">
             </div>
           </section>
         </div>
