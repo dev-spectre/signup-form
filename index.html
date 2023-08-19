@@ -54,23 +54,27 @@
               <input type="text" name="email" id="email"
                 pattern="[a-zA-Z]([.\-+_]?[a-zA-Z0-9]+)*@[a-zA-Z]+(-?[a-zA-Z]+)+(\.[a-zA-Z]+-?[a-zA-Z]+)?(\.[a-zA-Z]{2,}){1,2}$"
                 placeholder="example@mail.com" required>
+              <p class="error-message" aria-hidden="true">Please enter a valid email address</p>
             </div>
             <div class="phone">
               <label for="phone">Phone</label>
               <span aria-label="required"></span>
               <input type="tel" name="phone" id="phone" pattern="\d{4,14}$" placeholder="xxxxxxxxxx" required>
+              <p class="error-message" aria-hidden="true">Please enter a valid phone number</p>
             </div>
           </section>
           <section class="password-section">
             <div class="password">
               <label for="password">Password</label>
               <span aria-label="required"></span>
-              <input type="password" name="password" id="password" required placeholder="">
+              <input type="password" name="password" id="password" required placeholder="" pattern=".{8,}">
+              <p class="error-message" aria-hidden="true">Password must be minimum 8 characters</p>
             </div>
             <div class="confirm-password">
               <label for="confirm-password">Confirm password</label>
               <span aria-label="required"></span>
               <input type="password" name="confirm-password" id="confirm-password" required placeholder="">
+              <p class="error-message" aria-hidden="true">Passwords don't match</p>
             </div>
           </section>
         </div>
