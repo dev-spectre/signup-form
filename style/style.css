@@ -30,6 +30,19 @@ body {
   background-position: center bottom;
 }
 
+.credits,
+.credits a {
+  color: #ffffff2f;
+  font-size: clamp(1.063rem, 0.35vw + 1rem, 3.063rem);
+}
+
+.credits {
+  position: absolute;
+  bottom: 3px;
+  text-align: center;
+  width: 100%;
+}
+
 .form-section {
   --_form-section-padding-block: 57.6px;
   --_form-section-padding-inline: 52.8px;
@@ -84,7 +97,6 @@ form {
 .form-widgets {
   display: flex;
   flex-direction: column;
-  /* gap: 20px; */
 }
 
 .name-section,
