@@ -3,6 +3,7 @@
   --form-bg-color: #dde0f0;
   --secondary-color: #4e5d94;
   --input-bg-color: #ebedf3;
+  --error-color: rgb(216, 62, 62);
 }
 
 *,
@@ -68,26 +69,29 @@ form {
   font-size: clamp(1rem, 0.2vw + 1rem, 1.188rem);
 }
 
-.service-description,
-.submit-container {
+.service-description {
   margin-inline: var(--_form-section-padding-inline);
   margin-block: var(--_form-section-padding-block);
 }
 
 .submit-container {
   font-size: clamp(0.938rem, 3.5vw - 1rem, 1.063rem);
+  margin-inline: var(--_form-section-padding-inline);
+  margin-block: calc(var(--_form-section-padding-block) * 0.2)
+              calc(var(--_form-section-padding-block) * 0.8);
 }
 
 .form-widgets {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .name-section,
 .contact-section,
 .password-section {
-  --_gap-row: calc(0.7em + 7px);
+  --_margin-bottom: 12px;
+  --_gap-row: calc(0.7em + var(--_margin-bottom, 12px));
 
   display: flex;
   gap: var(--_gap-row) 30px;
@@ -98,21 +102,20 @@ form {
   margin-bottom: var(--_gap-row);
 }
 
+.btn,
 .form-widgets > section > div {
-  width: 45%;
-  max-width: 470px;
-  min-width: 250px;
+  width: clamp(250px, 45%, 470px);
 }
 
 label {
   display: block;
-  text-transform: uppercase;
   margin-bottom: 2px;
+  font-weight: 600;
 }
 
 form h2 {
-  font-size: clamp(1.25rem, 0.55vw + 1rem, 1.688rem);
-  margin-bottom: 12px;
+  font-size: calc(clamp(1.25rem, 0.55vw + 1rem, 1.688rem) * 1.17);
+  margin-bottom: 30px;
   font-weight: 600;
 }
 
@@ -136,13 +139,13 @@ input[type="password"] {
 }
 
 input:invalid:not(:placeholder-shown) {
-  outline: 3px solid rgb(177, 94, 94);
+  outline: 3px solid var(--error-color);
   outline-offset: 2px;
 }
 
 .error-message {
-  color: rgb(177, 94, 94);
-  font-size: calc(var(--_gap-row) - 7px);
+  color: var(--error-color);
+  font-size: calc(var(--_gap-row) - var(--_margin-bottom));
   padding: 0;
   margin: 0;
   margin-top: 7px;
@@ -165,7 +168,8 @@ input:invalid:not(:placeholder-shown) + .error-message {
   padding: 9px 28px;
   font-weight: 700;
   font-size: clamp(1.25rem, 0.5vw + 1rem, 1.438rem);
-  margin-bottom: 13px;
+  margin-top: 20px;
+  margin-inline: auto;
 }
 
 .btn:hover {
@@ -199,6 +203,12 @@ input:invalid:not(:placeholder-shown) + .error-message {
       rgba(0, 0, 0, 0) 100%
     );
     background-color: rgba(0, 0, 0, 0);
-    height: max(50%, 200px);
+    height: max(70%, 200px);
+  }
+
+  .logo {
+    width: 80%;
+    margin-top: 30%;
+    transform: translateY(-50%);
   }
 }
